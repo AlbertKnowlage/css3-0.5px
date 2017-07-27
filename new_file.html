@@ -1,0 +1,34 @@
+<!doctype html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+  <title></title>
+   <style type="text/css">
+.content{
+
+   position:relative;
+   width: 300px;
+}
+
+.content:before{
+content: '';
+position: absolute;
+width: 200%;
+height: 1px;
+bottom: 0;
+border-bottom: 1px solid red;
+-webkit-transform-origin: 0 0;
+transform-origin: 0 0;
+-webkit-transform: scale(.5,.5);
+transform: scale(.5,.5);
+-webkit-box-sizing: border-box;
+box-sizing: border-box
+
+}
+  </style>
+ </head>
+ <body>
+  <div class="content">654654654654</div>
+  <!--大致原理是：通过CSS3插入一个伪元素，该元素宽度为父级2倍，高度为1px，然后通过css3缩放将其缩小一倍，从而实现一个0.5px的边框。-->
+ </body>
+ </html>
